@@ -243,7 +243,7 @@ USERS_URLS = [
     "https://google.qwiklabs.com/public_profiles/7144d08e-e771-4f1f-aeb5-8f3a6a108d9f",
     "https://www.qwiklabs.com/public_profiles/bc6aaab4-2acb-4de7-9ebf-99d9f1674879",
     "https://google.qwiklabs.com/public_profiles/78fcd487-e1c4-4c78-b1d5-950110c39abb",
-    "https://www.qwiklabs.com/public_profiles/2957b539-04f7-479d-83c9-c47f3e1c80c6",
+    "https://qwiklabs.com/public_profiles/2957b539-04f7-479d-83c9-c47f3e1c80c6",
     "https://google.qwiklabs.com/public_profiles/b9f55678-b78e-4047-a905-be5e5593ef3d",
     "https://www.qwiklabs.com/public_profiles/fa094dcf-6187-4133-89db-a7093e397860",
     "https://www.qwiklabs.com/public_profiles/fa094dcf-6187-4133-89db-a7093e397860",
