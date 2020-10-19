@@ -27,7 +27,7 @@ def GetCountAndResourcesDone(URL):
     r = requests.get(URL) 
     soup = BeautifulSoup(r.content, 'html5lib')
     quests = soup.findAll('div', attrs = {'class':'public-profile__badges'})   
-    for row in quests[0].findAll('div', attrs = {'class':'public-profile__badge'}): 
+    for row in quests[0].findAll('ql-badge badge'): 
         divs = row.findChildren("div" , recursive=False)
         if divs[1].text.strip() in CHALLENGES_AVAILABLE:
             COMPLETED_QUESTS.append(divs[1].text.strip())
