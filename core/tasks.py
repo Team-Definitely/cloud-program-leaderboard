@@ -3,7 +3,7 @@ from core.models import UserModel
 import requests 
 from bs4 import BeautifulSoup
 from celery import shared_task 
-
+import json
 CHALLENGES_AVAILABLE = [
     'Integrate with Machine Learning APIs', 
     'Perform Foundational Data, ML, and AI Tasks in Google Cloud', 
@@ -24,13 +24,16 @@ CHALLENGES_AVAILABLE = [
 URL = "https://google.qwiklabs.com/public_profiles/7e0abd7b-15e0-4e51-8db2-1d552322ad3c"
 def GetCountAndResourcesDone(URL):
     COMPLETED_QUESTS = []
-    r = requests.get(URL) 
+    r = requests.get(URL)
     soup = BeautifulSoup(r.content, 'html5lib')
-    quests = soup.findAll('div', attrs = {'class':'public-profile__badges'})   
-    for row in quests[0].findAll('ql-badge badge'): 
-        divs = row.findChildren("div" , recursive=False)
-        if divs[1].text.strip() in CHALLENGES_AVAILABLE:
-            COMPLETED_QUESTS.append(divs[1].text.strip())
+    quests = soup.findAll('div', attrs = {'class':'public-profile__badges'})
+    for row in quests[0].findAll('ql-badge'):
+        var = str(row)
+        str_dict = var[var.find('{'): var.find('}') + 1]
+        dict_ = json.loads(str_dict)
+
+        if dict_['title'] in CHALLENGES_AVAILABLE:
+            COMPLETED_QUESTS.append(dict_['title'])
     profile = soup.findAll('div', attrs = {'class':'public-profile__hero'})[0]
     dp = profile.img['src']
     name = profile.h1.text
