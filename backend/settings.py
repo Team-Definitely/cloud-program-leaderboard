@@ -248,7 +248,7 @@ USERS_URLS = [
     "https://www.qwiklabs.com/public_profiles/fa094dcf-6187-4133-89db-a7093e397860",
     "https://www.qwiklabs.com/public_profiles/fa094dcf-6187-4133-89db-a7093e397860",
     "https://www.qwiklabs.com/public_profiles/1fc4a636-3fbe-4d45-a276-f8ac692550bd",
-    "https://www.qwiklabs.com/public_profiles/5e54b082-4848-4632-bbba-dad3ab9874c7",
+    "https://www.qwiklabs.com/public_profiles/5e54b082-4848-4632-bbba-dad3ab9874c7"
 ]
 
 
