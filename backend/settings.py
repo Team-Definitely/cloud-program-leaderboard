@@ -101,6 +101,7 @@ CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
 
 USERS_URLS = [
+    "https://google.qwiklabs.com/public_profiles/18723b17-d132-455a-b529-1ca2cacf21e9",
     "https://www.qwiklabs.com/public_profiles/0359de94-0bc6-4fb2-8d7c-08c4d8438591",
     "https://google.qwiklabs.com/public_profiles/8b924051-b2a4-4dcc-a636-91b45ec97cf5",
     "https://www.qwiklabs.com/public_profiles/901b7979-ff7b-48f1-a9c6-486aa4e8631b",
